@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <script src="main.js">    </script>
+</head>
+<body>
+        <h3>Enter Total</h3>
+    <input type="number" id="total"><br>
+        <h3>Enter obtained</h3>
+     <input type="number" id="obtain"><br>
+     <input type="button" value=" Percentage " onclick="perc()" >
+     <h3>result</h3>
+     <div id="ans" ></div>
+     
+
+<script>
+   function perc(){
+       var t= document.getElementById('total').value;
+       var o= document.getElementById('obtain').value;
+       var per= o/t*100
+       
+    if(t==""){
+        document.getElementById('total').style.border ="2px solid red";
+    } if(o==""){
+        document.getElementById('obtain').style.border= "2px solid red";
+    }
+    if(t==""||o==""){
+        document.getElementById('ans').innerHTML= "Invalid Input "   ;
+    }
+    else{
+        document.getElementById('ans').innerHTML= "Percenntage is: " + per.toFixed(2) + "%" ;
+    }
+   }
+   
+
+        </script>
+</body>
+</html>
